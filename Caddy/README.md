@@ -10,3 +10,19 @@ caddy:
     - webapp1
     - webapp2
 ```
+
+>`Caddyfile`
+```
+local.boqiao919.com:80 {
+	index /caddy/index.html
+	tls off
+	proxy / webapp1:8080 {
+		policy ip_hash 
+		transparent
+	}
+	proxy / webapp2:8080 {
+		policy ip_hash 
+		transparent
+	}
+}
+```
