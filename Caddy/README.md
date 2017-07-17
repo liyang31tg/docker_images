@@ -5,7 +5,7 @@ caddy:
   ports:
     - "80:80"
   volumes:
-    - /Users/liyang/Downloads/caddy_ubuntu/Caddyfile:/etc/Caddyfile //替换
+    - ./Caddyfile:/etc/Caddyfile //可以使用相对路径挂载Caddyfile
   links:
     - webapp1
     - webapp2
