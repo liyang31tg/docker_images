@@ -32,8 +32,7 @@ mysql:
     - MYSQL_ROOT_PASSWORD=123456 #root用户的初始化密码
 
 redis:
-    # image: redis
-    build: ../Redis
+    image: registry.cn-hangzhou.aliyuncs.com/lizi/redis
     ports:
       - "6378:6379"
     volumes:
