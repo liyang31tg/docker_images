@@ -31,5 +31,13 @@ mysql:
   environment:
     - MYSQL_ROOT_PASSWORD=123456 #root用户的初始化密码
 
+redis:
+    image: redis
+    ports:
+      - "6378:6379"
+    volumes:
+      - /Users/liyang/Desktop/redisdata:/data
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf
+
   
 
