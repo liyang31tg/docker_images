@@ -21,5 +21,15 @@ caddy:
   links:
     - webapp1
     - webapp2
+
+mysql:
+  image: mysql
+  ports:
+    - "3306:3306" #这个就没必要暴露出来，发布的时候
+  volumes:
+    - /Users/liyang/Desktop/mysqldata:/var/lib/mysql #挂载data文件 ，配置文件非必要挂载出来
+  environment:
+    - MYSQL_ROOT_PASSWORD=123456 #root用户的初始化密码
+
   
 
