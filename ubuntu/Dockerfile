@@ -1,4 +1,4 @@
 FROM ubuntu
 COPY ./main /
 WORKDIR /
-CMD [ "./main","&"]
+CMD [ "./main"]
