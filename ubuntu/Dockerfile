@@ -1,2 +1,4 @@
 FROM ubuntu
-RUN mkdir -p /home/liyang
+COPY ./main /
+WORKDIR /
+CMD [ "./main","&"]
