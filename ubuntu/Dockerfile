@@ -1,4 +1,3 @@
 FROM ubuntu
-COPY ./main /
-WORKDIR /
-CMD [ "./main"]
+RUN apt-get update && apt-get install tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone
