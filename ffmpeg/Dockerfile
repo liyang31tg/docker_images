@@ -1,5 +1,4 @@
 FROM ubuntu
-WORKDIR /roo
+WORKDIR /root/ffmpeg
 ADD ./ffmpeg-3.4.2 ./
-RUN apt-get update && apt-get  install  build-essential \
-&& apt-get install yasm
+RUN apt-get update && apt-get  install -y build-essential && apt-get install -y yasm && ./configure && make && make install
